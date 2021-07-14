@@ -11,6 +11,8 @@ export class PracticeComponent implements OnInit {
   @Input() kid="";
   @Output() box=new EventEmitter<any>();
   name="Shardul";
+  attributes="use of  [ngstyle]";
+  showorHide=true;
 
   constructor(private authentication:AuthenticationService) {
     this.authentication.myObservale().subscribe((data)=>{
@@ -22,7 +24,8 @@ export class PracticeComponent implements OnInit {
   ngOnInit(): void {
   }
   studio(){
-    this.box.emit("child to parents")
+    this.box.emit("child to parents");
+    this.showorHide=!this.showorHide;
   }
 
 }
