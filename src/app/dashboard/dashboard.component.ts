@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -28,9 +29,13 @@ export class DashboardComponent implements OnInit {
       age:60
     }
   ];
-  constructor() { }
+  constructor( private router:Router ) { }
 
   ngOnInit(): void {
+  }
+  toy(){
+    console.log("kkkkk");
+    this.router.navigate(['practice'])
   }
 
 }

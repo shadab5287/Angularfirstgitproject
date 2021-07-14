@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PracticeComponent } from './practice/practice.component';
+import { ExeComponent } from './exe/exe.component';
 
 const route:Routes=[
   {
@@ -23,6 +25,10 @@ const route:Routes=[
     path:"dashboard",
     component:DashboardComponent,
   },
+  {
+    path:"practice",
+    component:ExeComponent
+  }
 ]
 
 @NgModule({
@@ -30,7 +36,9 @@ const route:Routes=[
     AppComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    PracticeComponent,
+    ExeComponent
   ],
   imports: [
     BrowserModule,
