@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter,ViewChild } from '@angular/core';
+import { AuthenticationService } from '../service/authentication.service';
 
 
 @Component({
@@ -11,7 +12,12 @@ export class PracticeComponent implements OnInit {
   @Output() box=new EventEmitter<any>();
   name="Shardul";
 
-  constructor() { }
+  constructor(private authentication:AuthenticationService) {
+    this.authentication.myObservale().subscribe((data)=>{
+      console.log("My data =====>>",data);
+  })
+   }
+  
 
   ngOnInit(): void {
   }

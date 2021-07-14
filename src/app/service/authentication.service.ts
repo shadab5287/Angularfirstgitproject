@@ -27,4 +27,16 @@ export class AuthenticationService {
     })
 
   }
+  myObservale(){
+    let backend= new Observable((observer)=>{
+
+      observer.next("I am no waitng to emit data");
+      // setTimeout(function(){
+      //     observer.next("hey data is there");
+      // },1000);
+    });
+
+    return backend;
+  }
+  
 }
