@@ -24,7 +24,13 @@ export class LoginComponent implements OnInit {
     console.log("hello");
     this.autheticationService.login(this.Username,this.Password).subscribe((isLogin)=>{
       console.log("login Succssessfully");
+      if(isLogin){
+        this.router.navigate(['dashboard']);
+      }
+      else{
+       console.log("username or password is wrong") 
+      }
     });
     console.log(this.Username);
   }
-}
+}  
