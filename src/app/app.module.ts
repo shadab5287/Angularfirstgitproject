@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PracticeComponent } from './practice/practice.component';
 import { ExeComponent } from './exe/exe.component';
+import { AddingsirnamePipe } from './service/addingsirname.pipe';
 
 const route:Routes=[
   {
@@ -38,7 +39,8 @@ const route:Routes=[
     SignupComponent,
     DashboardComponent,
     PracticeComponent,
-    ExeComponent
+    ExeComponent,
+    AddingsirnamePipe
   ],
   imports: [
     BrowserModule,

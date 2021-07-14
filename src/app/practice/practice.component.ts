@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter,ViewChild } from '@angular/core';
 
 
 @Component({
@@ -9,6 +9,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 export class PracticeComponent implements OnInit {
   @Input() kid="";
   @Output() box=new EventEmitter<any>();
+  name="Shardul";
 
   constructor() { }
 
