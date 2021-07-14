@@ -1,19 +1,19 @@
-<p>login works!</p>
+<!-- <p>login works!</p> -->
 <div class="main" >
     <div style="position:relative">
-        <form action="">
+        <form #loginForm="ngForm" action="">
             <div style="margin: 10px;">
-                <input type="text" placeholder="User Name">
+                <input type="text" required name="Username" placeholder="User Name"  [(ngModel)]="Username">
             </div>
             <div  style="margin: 10px;">
-                <input type="password" placeholder="Password">
+                <input required type="password" name="Password" placeholder="Password" [(ngModel)]="Password">
             </div>
             <div style="display: flex;justify-content: space-between; margin: 10px;">
                 <div>
-                    <button>login</button>
+                    <button [disabled]="loginForm.invalid" (click)="calllogin()">Submit</button>
                 </div>
                 <div>
-                    <button>Sign Up</button>
+                    <button (click)="navigateToSignUp()">Sign Up</button>
                 </div>
             </div>
         </form>
