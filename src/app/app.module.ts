@@ -11,15 +11,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PracticeComponent } from './practice/practice.component';
 import { ExeComponent } from './exe/exe.component';
 import { AddingsirnamePipe } from './service/addingsirname.pipe';
+import { RoutingguardService } from './guard/routingguard.service';
 
 const route:Routes=[
   {
     path:"",
     component:LoginComponent,
+    
   },
   {
     path:"signup",
     component:SignupComponent,
+    canActivate:[ RoutingguardService]
 
   },
   {
