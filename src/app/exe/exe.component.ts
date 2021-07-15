@@ -12,6 +12,6 @@ export class ExeComponent implements OnInit {
   ngOnInit(): void {
   }
 raymond(mydata:any){
-console.log("jug",mydata)
+console.log("data",mydata)
 };
 }

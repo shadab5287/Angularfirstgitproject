@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter,ViewChild } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter,ViewChild, OnChanges } from '@angular/core';
 import { AuthenticationService } from '../service/authentication.service';
 
 
@@ -7,10 +7,10 @@ import { AuthenticationService } from '../service/authentication.service';
   templateUrl: './practice.component.html',
   styleUrls: ['./practice.component.css']
 })
-export class PracticeComponent implements OnInit {
+export class PracticeComponent implements OnInit,OnChanges {
   @Input() kid="";
   @Output() box=new EventEmitter<any>();
-  name="Shardul";
+  name="avinash";
   attributes="use of  [ngstyle]";
   showorHide=true;
 
@@ -19,9 +19,13 @@ export class PracticeComponent implements OnInit {
       console.log("My data =====>>",data);
   })
    }
+   ngOnChanges(){
+     console.log("ngonchanges called")
+   }
   
 
   ngOnInit(): void {
+    console.log("ngoninit called")
   }
   studio(){
     this.box.emit("child to parents");
