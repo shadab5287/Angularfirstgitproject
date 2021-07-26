@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter,ViewChild, OnChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthenticationService } from '../service/authentication.service';
 
 
@@ -12,13 +13,13 @@ export class PracticeComponent implements OnInit,OnChanges {
   @Output() box=new EventEmitter<any>();
   name="avinash";
   attributes="use of  [ngstyle]";
-  showorHide=true;
+  showorHide=true;  
 
-  constructor(private authentication:AuthenticationService) {
+  constructor(private authentication:AuthenticationService,private ks:Router ) {
     this.authentication.myObservale().subscribe((data)=>{
       console.log("My data =====>>",data);
   })
-   }
+   };
    ngOnChanges(){
      console.log("ngonchanges called")
    }
@@ -27,9 +28,11 @@ export class PracticeComponent implements OnInit,OnChanges {
   ngOnInit(): void {
     console.log("ngoninit called")
   }
-  studio(){
+  studio(){ 
     this.box.emit("child to parents");
     this.showorHide=!this.showorHide;
+    this.ks.navigate(['exe'])
+    
   }
-
+ 
 }

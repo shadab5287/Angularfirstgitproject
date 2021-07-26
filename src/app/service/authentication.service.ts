@@ -24,14 +24,14 @@ export class AuthenticationService {
     return new Observable((observe)=>{
     console.log("signup details",myName,Number,Email,Age,Username,Password,Confirmpassword);
     observe.next(true)
-    })
+    })  
 
   }
   myObservale(){
     let backend= new Observable((observer)=>{
 
       observer.next("I am no waitng to emit data");
-      // setTimeout(function(){
+      // setTimeout(function(){  
       //     observer.next("hey data is there");
       // },1000);
     });

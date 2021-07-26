@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  @Input() vodafone="";
   tableHeadingList = ["FirstName", "LastName", "Age"];
   tableData = [
     {
@@ -36,6 +37,7 @@ export class DashboardComponent implements OnInit {
   toy(){
     console.log("kkkkk");
     this.router.navigate(['practice'])
+    console.log(this.vodafone);
   }
 
 }

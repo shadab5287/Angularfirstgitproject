@@ -15,3 +15,4 @@ raymond(mydata:any){
 console.log("data",mydata)
 };
 }
+ 

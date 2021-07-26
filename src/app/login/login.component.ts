@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['dashboard']);
       }
       else{
-       console.log("username or password is wrong") 
+       console.log("username or password is wrong")    
       }
     });
     console.log(this.Username);
