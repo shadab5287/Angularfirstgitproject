@@ -13,6 +13,8 @@ import { ExeComponent } from './exe/exe.component';
 import { AddingsirnamePipe } from './service/addingsirname.pipe';
 import { RoutingguardService } from './guard/routingguard.service';
 import { CustomComponent } from './custom/custom.component';
+import { DatePipe } from './service/date.pipe';
+
 
 const route:Routes=[
   {
@@ -47,7 +49,8 @@ const route:Routes=[
     PracticeComponent,
     ExeComponent,
     AddingsirnamePipe,
-    CustomComponent
+    CustomComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,
