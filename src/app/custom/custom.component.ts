@@ -6,7 +6,7 @@ import { OrderService } from "../service/order.service";
     templateUrl: './custom.component.html',
 })
 export class CustomComponent {
-    orderstatus:any=""
+    orderstatus:any="";
     constructor(private orderdetails:OrderService ){
         this.orderstatus=this.orderdetails.myorder();
     }
